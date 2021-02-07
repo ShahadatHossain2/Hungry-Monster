@@ -56,7 +56,6 @@ function ingredients(meal) {
     ingredientList.push(meal.strMeasure19+' '+meal.strIngredient19);
     ingredientList.push(meal.strMeasure20+' '+meal.strIngredient20);
 
-    console.log((meal.strMeasure20+' '+meal.strIngredient20).length);
     const parents = document.getElementById('details');
     const div = document.createElement("div");
     const ul = document.createElement("ul");
@@ -64,12 +63,12 @@ function ingredients(meal) {
     
     div.innerHTML = `
     <img src="${meal.strMealThumb}">
-    <h3>${meal.strMeal}</h3> <br>
+    <h3>${meal.strMeal}</h3>
     <h5>Ingredients:</h5>`;
 
     for (let i = 0; i < ingredientList.length; i++) {
         const ingredient = ingredientList[i];
-        if(ingredient.length !=1 && ingredient != "null null") {
+        if(ingredient.length > 2 && ingredient != "null null" && ingredient != "null " && ingredient != " null" ) {
             const li = document.createElement("li");
             li.innerHTML = `<span class="icon">&#9989;</span> ${ingredient}`;
             ul.appendChild(li);
