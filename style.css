@@ -39,3 +39,7 @@
 h3{
     margin-bottom: 20px;
 }
+#errorMessage{
+    text-align: center;
+    color: red;
+}

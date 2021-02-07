@@ -6,9 +6,16 @@ document.getElementById('searchButton').addEventListener('click', function () {
         .then(data => {
             displayMeal(data);
         })
+        .catch(error => {
+            document.getElementById('errorMessage').style.display = "block";
+            const parent = document.getElementById('errorMessage');
+            parent.innerHTML = `<h1>Sorry! No Match Found</h1>`;
+        })
 })
 
 const displayMeal = data => {
+    document.getElementById('mealName').value = "";
+    document.getElementById('errorMessage').style.display = "none";
     const parent = document.getElementById('mealList');
     parent.innerHTML = "";
     const parent2 = document.getElementById('details');
