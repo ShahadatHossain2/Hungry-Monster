@@ -1,0 +1,35 @@
+#mealList img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#mealList{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+#mealList h2{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+#mealList div{
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+#details{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    margin-bottom: 20px;
+}
+#details div{
+    border-radius: 10px;
+}
+
+#details img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
