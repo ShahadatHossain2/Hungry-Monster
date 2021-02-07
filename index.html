@@ -8,24 +8,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <form class="col-md-6 m-auto py-5">
-            <div class="input-group mb-3">
-                <input id="mealName" type="text" class="form-control" placeholder="Search for Meal...">
-                <div class="input-group-append">
-                    <button id="searchButton" type="button" class="btn btn-danger">Search</button>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#FFFBF0;">
+            <div class="container-fluid">
+              <a class="navbar-brand text-warning fw-bold" href="#">Hungry Monster</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav fw-bold">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="#">Recipes</a>
+                  <a class="nav-link" href="#">Blog</a>
                 </div>
+              </div>
             </div>
-        </form>
-    </div>
-    <div class="container">
-        <div id="details">
-            
-        </div>
-        <div id="mealList">
+          </nav>
+    </header>
 
+    <main>
+        <div class="container">
+            <form class="col-md-6 m-auto py-5">
+                <div class="input-group mb-3">
+                    <input id="mealName" type="text" class="form-control" placeholder="Search for Meal...">
+                    <div class="input-group-append">
+                        <button id="searchButton" type="button" class="btn btn-danger">Search</button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </div>
+        <div class="container">
+            <div id="details">
+                
+            </div>
+            <div id="mealList">
+    
+            </div>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
