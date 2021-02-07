@@ -35,25 +35,32 @@ function displayMeal(data) {
 
 function ingredients(meal) {
     const ingredientList = [];
-    ingredientList.push(meal.strIngredient1);
-    ingredientList.push(meal.strIngredient2);
-    ingredientList.push(meal.strIngredient3);
-    ingredientList.push(meal.strIngredient4);
-    ingredientList.push(meal.strIngredient5);
-    ingredientList.push(meal.strIngredient6);
-    ingredientList.push(meal.strIngredient7);
-    ingredientList.push(meal.strIngredient8);
-    ingredientList.push(meal.strIngredient9);
-    ingredientList.push(meal.strIngredient10);
-    ingredientList.push(meal.strIngredient11);
-    ingredientList.push(meal.strIngredient12);
-    ingredientList.push(meal.strIngredient13);
-    ingredientList.push(meal.strIngredient14);
-    ingredientList.push(meal.strIngredient15);
+    ingredientList.push(meal.strMeasure1+' '+meal.strIngredient1);
+    ingredientList.push(meal.strMeasure2+' '+meal.strIngredient2);
+    ingredientList.push(meal.strMeasure3+' '+meal.strIngredient3);
+    ingredientList.push(meal.strMeasure4+' '+meal.strIngredient4);
+    ingredientList.push(meal.strMeasure5+' '+meal.strIngredient5);
+    ingredientList.push(meal.strMeasure6+' '+meal.strIngredient6);
+    ingredientList.push(meal.strMeasure7+' '+meal.strIngredient7);
+    ingredientList.push(meal.strMeasure8+' '+meal.strIngredient8);
+    ingredientList.push(meal.strMeasure9+' '+meal.strIngredient9);
+    ingredientList.push(meal.strMeasure10+' '+meal.strIngredient10);
+    ingredientList.push(meal.strMeasure11+' '+meal.strIngredient11);
+    ingredientList.push(meal.strMeasure12+' '+meal.strIngredient12);
+    ingredientList.push(meal.strMeasure13+' '+meal.strIngredient13);
+    ingredientList.push(meal.strMeasure14+' '+meal.strIngredient14);
+    ingredientList.push(meal.strMeasure15+' '+meal.strIngredient15);
+    ingredientList.push(meal.strMeasure16+' '+meal.strIngredient16);
+    ingredientList.push(meal.strMeasure17+' '+meal.strIngredient17);
+    ingredientList.push(meal.strMeasure18+' '+meal.strIngredient18);
+    ingredientList.push(meal.strMeasure19+' '+meal.strIngredient19);
+    ingredientList.push(meal.strMeasure20+' '+meal.strIngredient20);
 
+    console.log((meal.strMeasure20+' '+meal.strIngredient20).length);
     const parents = document.getElementById('details');
     const div = document.createElement("div");
     const ul = document.createElement("ul");
+    ul.style.listStyleType = "none";
     
     div.innerHTML = `
     <img src="${meal.strMealThumb}">
@@ -62,9 +69,9 @@ function ingredients(meal) {
 
     for (let i = 0; i < ingredientList.length; i++) {
         const ingredient = ingredientList[i];
-        if(ingredient!="") {
+        if(ingredient.length !=1 && ingredient != "null null") {
             const li = document.createElement("li");
-            li.innerText = ingredient;
+            li.innerHTML = `<span class="icon">&#9989;</span> ${ingredient}`;
             ul.appendChild(li);
         }
     }

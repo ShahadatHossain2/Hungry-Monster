@@ -27,6 +27,9 @@
 #details div{
     border-radius: 10px;
 }
+.icon{
+    font-size: 15px;
+}
 
 #details img{
     width: 100%;
